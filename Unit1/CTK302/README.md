@@ -1,1 +1,0 @@
-# CTK302-Template
