@@ -20,6 +20,10 @@ function draw() {
     ellipse(365, 350, 15, 15);
     fill("green");
     rect(0, 600, 900, 1000); // Draw green rectangle using BOTTOM mode 
+    // bowlerhat
+    fill("blue");
+    rect(100,100,50,150);
+
   } else {
     // when the mouse isn't pressed!
     background("blue")
