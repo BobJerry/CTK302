@@ -7,23 +7,30 @@ function setup() {
 }
 function draw() {
   if (mouseIsPressed) {
-    background("black")
+    background("gray")
     fill("white");
     noStroke();
 	fill("white");
+  //moon
 	ellipse(500, 25, 150, 150);
-    ellipse(300,300, 100, 200)
-	rect(300, 400, 100, 100);
+  //ghost
+    ellipse(300,300, 150, 200)
+	rect(300, 400, 150, 150);
     rectMode(BOTTOM);
+    // eyebrows and eyes
      fill("black");
-    ellipse (315,350,15,15);
-    ellipse(365, 350, 15, 15);
+    rect (330,360,35,20);
+    rect (385,360,35,20);
+    rect (330,370,25,40);
+    rect (385,370,25,40);
+    rect ();
+    //rect(365, 350, 15, 15);
     fill("green");
     rect(0, 600, 900, 1000); // Draw green rectangle using BOTTOM mode 
     // bowlerhat
-    fill("blue");
-    rect(100,100,50,150);
-
+    fill("black");
+    rect(300,325,150,25);
+    rect(325,250,100,100);
   } else {
     // when the mouse isn't pressed!
     background("blue")
