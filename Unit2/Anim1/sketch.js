@@ -17,9 +17,6 @@ if (x>width) {
 }
 function avatar() {
   fill("white");
-    noStroke();
-	fill("white");
-	ellipse(500, 25, 150, 150);
     ellipse(300,300, 100, 200)
 	rect(300, 400, 100, 100);
     rectMode(BOTTOM);
