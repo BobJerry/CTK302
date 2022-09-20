@@ -16,5 +16,5 @@ if (x>width) {
 }
 }
 function avatar() {
-  
+  avatar();
 }
