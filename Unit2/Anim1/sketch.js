@@ -16,5 +16,11 @@ if (x>width) {
 }
 }
 function avatar() {
-  avatar();
+  fill("white");
+    ellipse(300,300, 100, 200)
+	rect(300, 400, 100, 100);
+    rectMode(BOTTOM);
+     fill("black");
+    ellipse (315,350,15,15);
+    ellipse(365, 350, 15, 15);
 }
