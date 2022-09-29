@@ -12,27 +12,25 @@ function draw() {
   switch(numberOfTouches) {
     case 0: 
       text("Touch me!", 5, 22) ; 
+      loadImage("assets/saul.jpg");
       break ;
       
       case 1: 
        text("beep", 5, 22) ; 
       // put a picture here
-      Image(assets/saul.jpg)
+      loadImage("assets/saul.jpg");
       break ;
       
       case 2:
       text("boop", 5, 22) ; 
       // put a picture here
-      Image(assets/finger.jpg)
+      loadImage("assets/finger.jpg");
       break ;
       
       case 3:
      text("beep", 5, 22) ; 
       // put a picture here
-      Image(assets/waltuh.jpg)
+      loadImage("assets/walt.jpg");
       break ;
-    
-      
+    }
   }
-  
-}
