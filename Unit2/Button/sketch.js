@@ -9,18 +9,20 @@ function draw() {
  switch(state) {
   case 0:
  background("red");
- text("why did \nthe chicken cross the road", width/2, height/2);
+ text("what do you\ncall a fake noodle?", width/2, height/2);
  break;
 
  case 1:
  background("blue");
- text("because", width/2, height/2);
+ text("an impasta!", width/2, height/2);
  break;
  }
  rect(100, 100, 100, 100);
 }
 
 function mouseReleased() {
+
+if (mouseX > 100 && mouseX < 200 && mouseY > 100 && mouseY < 200)
 state++;
-if (state >1) state = 0;
+if (state > 1) state = 0;
 }

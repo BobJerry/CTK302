@@ -1,4 +1,5 @@
 let state = 0;
+let timer = 0;
 
 function setup() {
   createCanvas(500, 500);
@@ -9,12 +10,12 @@ function draw() {
  switch (state) {
   case 0:
  background("red");
- text("why did \nthe chicken cross the road", width/2, height/2);
+ text("One day you're \nthe best thing since sliced bread", width/2, height/2);
  break;
 
  case 1:
  background("blue");
- text("because", width / 2, height / 2);
+ text("The next you're toast!", width / 2, height / 2);
  break;
  }
 
