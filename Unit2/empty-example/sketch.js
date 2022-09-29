@@ -1,29 +1,35 @@
-let x = 0;
-let f1;
+let numberOfTouches ;
+
 function setup() {
-  createCanvas(500, 500);
-  f1 = loadFont("assets/mugs.ttf");
+  createCanvas(400, 400);
 }
 
 function draw() {
-  background(100);
-  textSize(100);
-  textFont(f1);
-text("Unit 2 Rules", x,200);
-x +=5;
-if (x>width) {
-  x=100;
-}
-}
-function avatar() {
-  fill("white");
-    noStroke();
-	fill("white");
-	ellipse(500, 25, 150, 150);
-    ellipse(300,300, 100, 200)
-	rect(300, 400, 100, 100);
-    rectMode(BOTTOM);
-     fill("black");
-    ellipse (315,350,15,15);
-    ellipse(365, 350, 15, 15);
+  clear();
+  numberOfTouches = touches.length;
+  text(numberOfTouches + ' touches', 5, 10);
+  
+  switch(numberOfTouches) {
+    case 0: 
+      text("no one is touching the screen", 5, 22) ; 
+      break ;
+      
+      case 1: 
+       text("it's kind of lonely here", 5, 22) ; 
+      // put a picture here
+      break ;
+      
+      case 2:
+      text("two fingers are touching the screen", 5, 22) ; 
+            // put a picture here
+      break ;
+      
+      case 3:
+     text("three are touching the screen", 5, 22) ; 
+            // put a picture here
+      break ;
+    
+      
+  }
+  
 }

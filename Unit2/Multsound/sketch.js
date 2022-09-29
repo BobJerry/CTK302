@@ -1,11 +1,11 @@
 let state = -1;
 let s1, s2, s3;
 
-function preload( {
+function preload() {
   s1 = loadSound("assets/happyrock.mp3")
   s2 = loadSound("assets/dreams.mp3")
   s3 = loadSound("assets/league.mp3")
-})
+}
 function setup() {
   createCanvas(400, 400);
 }
