@@ -14,33 +14,31 @@ function draw() {
   switch (state) {
 
     case 0: //green
-      fill("grey")
-      ellipse(width/2, height/2-170, 150, 150)
-      ellipse(width/2, height/2, 150, 150)
-      fill("green")
-      ellipse(width/2, height/2+170, 150, 150)
+      fill("grey");
+      ellipse(width/2, height/2-170, 150, 150);
+      ellipse(width/2, height/2, 150, 150);
+      fill("green");
+      ellipse(width/2, height/2+170, 150, 150);
       v=10;
       break;
 
     case 1: //yellow
-    fill("grey")
-    ellipse(width/2, height/2-170, 150, 150)
-    fill("yellow")
-    ellipse(width/2, height/2, 150, 150)
-    fill("grey")
-     ellipse(width/2, height/2+170, 150, 150)
+    fill("grey");
+    ellipse(width/2, height/2-170, 150, 150);
+    fill("yellow");
+    ellipse(width/2, height/2, 150, 150);
+    fill("grey");
+     ellipse(width/2, height/2+170, 150, 150);
      v=4;
     break;
 
     case 2: //red
-    fill("red")
-    ellipse(width/2, height/2-170, 150, 150)
-    fill("grey")
-    ellipse(width/2, height/2, 150, 150)
-    ellipse(width/2, height/2+170, 150, 150)
-    if (x>=width / 2 && x <= width / 2 + v) {
+    fill("red");
+    ellipse(width/2, height/2-170, 150, 150);
+    fill("grey");
+    ellipse(width/2, height/2, 150, 150);
+    ellipse(width/2, height/2+170, 150, 150);
     v=0;
-    }
     break;
   }
 
