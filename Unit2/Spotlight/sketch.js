@@ -1,4 +1,7 @@
 let state = 0;
+let x = 0;
+let v = 0;
+let timer = 0;
 
 function setup() {
   createCanvas(800, 800);
