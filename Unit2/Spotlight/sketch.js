@@ -2,16 +2,20 @@ let state = 0;
 
 function setup() {
   createCanvas(800, 800);
+  rectMode(CENTER);
 }
 
 function draw() {
 
   background(100);
-  
+  fill("yellow");
+  rect(width/2, height/2, 200, 600);
   switch (state) {
 
     case 0:
-      text("0", 100, 100);
+      ellipse(width/2, height/2, 150, 150)
+      ellipse(width/2, height/2, 150, 150)
+      ellipse(width/2, height/2, 150, 150)
       break;
 
     case 1:
