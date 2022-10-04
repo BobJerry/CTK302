@@ -40,18 +40,21 @@ function draw() {
     v=0;
     break;
   }
-}
+
 
 timer++;
 if (timer > 3*60) {
   timer = 0;
   state++;
   if (state>2) state=0;
-
 }
 fill("blue")
 rect(x, height - 75, 100, 50);
-
+x = x+v;
+if (x > width) {
+  x = 0;
+}
+}
 function mouseReleased() {
   state++;
   if (state > 2) state = 0;
