@@ -7,9 +7,10 @@ function setup() {
 
 function draw() {
 
-  background(100);
+  background("white");
   fill("yellow");
   rect(width/2, height/2, 200, 600);
+  
   switch (state) {
 
     case 0: //green
@@ -28,7 +29,7 @@ function draw() {
     ellipse(width/2, height/2, 150, 150)
     fill("grey")
      ellipse(width/2, height/2+170, 150, 150)
-     v=5;
+     v=4;
     break;
 
     case 2: //red
@@ -37,16 +38,17 @@ function draw() {
     fill("grey")
     ellipse(width/2, height/2, 150, 150)
     ellipse(width/2, height/2+170, 150, 150)
+    if (x>=width / 2 && x <= width / 2 + v) {
     v=0;
+    }
     break;
   }
 
-
-timer++;
-if (timer > 3*60) {
+  timer++;
+if (timer > 7 * 60) {
   timer = 0;
   state++;
-  if (state>2) state=0;
+  if (state > 2) state=0;
 }
 fill("blue")
 rect(x, height - 75, 100, 50);
