@@ -1,9 +1,9 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
 }
 
 function draw() {
-  background("black");
+  background("grey");
   fill("white");
-text("You have 10 seconds to decide the fate of the egg", 50, 50);
+text("You have 10 seconds to decide the fate of the egg", 215, 140);
 }
