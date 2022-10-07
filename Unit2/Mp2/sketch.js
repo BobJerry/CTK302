@@ -1,8 +1,10 @@
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(400, 400);
 }
 
 function draw() {
+  background("black");
 text("You have 10 seconds to decide the fate of the egg");
 textStyle("bold");
+switchstate 
 }
