@@ -5,5 +5,5 @@ function setup() {
 function draw() {
   background("black");
   fill("white");
-text("You have 10 seconds to decide the fate of the egg")
+text("You have 10 seconds to decide the fate of the egg", 50, 50);
 }
