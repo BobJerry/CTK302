@@ -4,7 +4,6 @@ function setup() {
 
 function draw() {
   background("black");
-text("You have 10 seconds to decide the fate of the egg");
-textStyle("bold");
-switchstate 
+  fill("white");
+text("You have 10 seconds to decide the fate of the egg")
 }
