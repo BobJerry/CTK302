@@ -26,17 +26,17 @@ textSize(20);
 switch (state) {
 
   case 0: //normal state
-  image(i1, width/2, height/2, width, height) ;
+  image(i3, width/2, height/2-175, 225, 225) ;
     v=10;
     break;
 
   case 1: //sawblade half way down
-  image(i1, width/2, height/2, width, height) ;
+  image(i3, width/2, height/2-175, 225, 225) ;
    v=5;
   break;
 
   case 2: //sawblade replaces egg
-  image(i1, width/2, height/2, width, height) ;
+  image(i3, width/2, height/2-175, 225, 225) ;
   v=0;
   break;
 }
@@ -57,5 +57,4 @@ x = 0;
 function mouseReleased() {
 state++;
 if (state > 2) state = 0;
-
 }
