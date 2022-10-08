@@ -17,11 +17,11 @@ function draw() {
   imageMode(CENTER);
   image(i1, width/2, height/2, width, height) ;
   image(i2, width/2, height/2+210, 150, 200) ;
-  image(i3, width/2, height/2, width, height) ;
+  image(i3, width/2, height/2-175, 225, 225) ;
 
 
   fill("white");
-text("You have 10 seconds to decide the fate of the egg", 215, 140);
+text("You have 10 seconds to decide the fate of the egg", 190, 50);
 textSize(20);
 switch (state) {
 
