@@ -7,14 +7,16 @@ let i2;
 function setup() {
   createCanvas(800, 800);
   i1= loadImage("assets/Background.jpg") ;
-  i2= loadImage("assets/Egg2.jpg");
+  i2= loadImage("assets/Egg2.png");
 }
 
 function draw() {
   background("grey");
   imageMode(CENTER);
   image(i1, width/2, height/2, width, height) ;
-  image(i2, width/2, height/2, 100, 100) ;
+  image(i2, width/2, height/2+150, 150, 150) ;
+
+
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 textSize(20);
