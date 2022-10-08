@@ -27,11 +27,13 @@ switch (state) {
 
   case 0: //normal state
   image(i3, width/2, height/2-175, 225, 225) ;
+  image(i2, width/2, height/2+210, 150, 200) ;
     v=10;
     break;
 
   case 1: //sawblade half way down
   image(i3, width/2, height/2-175, 225, 225) ;
+  image(i2, width/2, height/2+210, 150, 200) ;
    v=5;
   break;
 
