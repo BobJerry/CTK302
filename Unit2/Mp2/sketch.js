@@ -52,7 +52,7 @@ if (state > 2) state=0;
 fill("blue")
 
 ilx = ilx+v;
-if (x > width) {
+if (ilx > width) {
 ilx = 0;
 }
 }
