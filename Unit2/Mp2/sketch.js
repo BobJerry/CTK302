@@ -9,9 +9,10 @@ function setup() {
 
 function draw() {
   background("grey");
-  img= loadImage("assets/Egg.jpg");
+  loadImage("assets/Egg.jpg");
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
+textSize(20);
 switch (state) {
 
   case 0: //normal state
