@@ -51,9 +51,9 @@ if (state > 2) state=0;
 }
 fill("blue")
 
-x = x+v;
+ilx = ilx+v;
 if (x > width) {
-x = 0;
+ilx = 0;
 }
 }
 function mouseReleased() {
