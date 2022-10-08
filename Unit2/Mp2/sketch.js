@@ -4,17 +4,20 @@ let v = 0;
 let timer = 0;
 let i1;
 let i2;
+let i3;
 function setup() {
   createCanvas(800, 800);
   i1= loadImage("assets/Background.jpg") ;
   i2= loadImage("assets/Egg2.png");
+  i3= loadImage("assets/Sawblade.png");
 }
 
 function draw() {
   background("grey");
   imageMode(CENTER);
   image(i1, width/2, height/2, width, height) ;
-  image(i2, width/2, height/2+150, 150, 150) ;
+  image(i2, width/2, height/2+210, 150, 200) ;
+  image(i3, width/2, height/2, width, height) ;
 
 
   fill("white");
