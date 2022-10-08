@@ -20,7 +20,7 @@ function draw() {
   image(i3, width/2, height/2-175, 225, 225) ;
 
 
-  fill("white");
+fill("white");
 text("You have 10 seconds to decide the fate of the egg", 190, 50);
 textSize(20);
 switch (state) {
