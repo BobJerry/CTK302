@@ -8,7 +8,7 @@ function setup() {
 
 function draw() {
   background("grey");
-  loadFile("assets/Egg.psd");
+  loadImage("assets/Egg.jpg");
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 switch (state) {
