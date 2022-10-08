@@ -3,15 +3,18 @@ let x = 0;
 let v = 0;
 let timer = 0;
 let i1;
+let i2;
 function setup() {
   createCanvas(800, 800);
-  i1= loadImage("assets/Egg.jpg") ;
+  i1= loadImage("assets/Background.jpg") ;
+  i2= loadImage("assets/Egg2.jpg");
 }
 
 function draw() {
   background("grey");
   imageMode(CENTER);
-  image(i1, width/2, height/2 - 120, 500, 500) ;
+  image(i1, width/2, height/2, width, height) ;
+  image(i1, width/2, height/2, 50, 50) ;
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 textSize(20);
