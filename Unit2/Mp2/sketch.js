@@ -5,7 +5,7 @@ let timer = 0;
 let i1;
 function setup() {
   createCanvas(800, 800);
-  loadImage("assets/Egg.jpg");
+  i1= loadImage("assets/saul.jpg") ;
 }
 
 function draw() {
