@@ -26,17 +26,17 @@ textSize(20);
 switch (state) {
 
   case 0: //normal state
-  
+  image(i1, width/2, height/2, width, height) ;
     v=10;
     break;
 
   case 1: //sawblade half way down
-
+  image(i1, width/2, height/2, width, height) ;
    v=5;
   break;
 
   case 2: //sawblade replaces egg
-  
+  image(i1, width/2, height/2, width, height) ;
   v=0;
   break;
 }
