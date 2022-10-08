@@ -1,5 +1,5 @@
 let state = 0;
-let x = 0;
+let ilx = 0;
 let v = 0;
 let timer = 0;
 let i1;
