@@ -35,7 +35,7 @@ switch (state) {
   break;
 
   case 2: //sawblade replaces egg
-  text("The egg cracked under pressure :(")
+  text("The egg cracked under pressure :(", 240, 50)
   image(i3, width/2, height/2+210, 225, 225) ;
   v=0;
   break;
