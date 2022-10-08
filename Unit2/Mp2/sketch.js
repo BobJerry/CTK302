@@ -2,13 +2,14 @@ let state = 0;
 let x = 0;
 let v = 0;
 let timer = 0;
+let i1;
 function setup() {
   createCanvas(800, 800);
 }
 
 function draw() {
   background("grey");
-  loadImage("assets/Egg.jpg");
+  i1= loadImage("assets/Egg.jpg");
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 switch (state) {
