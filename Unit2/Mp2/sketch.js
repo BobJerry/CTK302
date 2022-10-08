@@ -5,11 +5,11 @@ let timer = 0;
 let i1;
 function setup() {
   createCanvas(800, 800);
+  loadImage("assets/Egg.jpg");
 }
 
 function draw() {
   background("grey");
-  loadImage("assets/Egg.jpg");
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 textSize(20);
