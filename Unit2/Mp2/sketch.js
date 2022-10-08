@@ -14,7 +14,7 @@ function draw() {
   background("grey");
   imageMode(CENTER);
   image(i1, width/2, height/2, width, height) ;
-  image(i1, width/2, height/2, 50, 50) ;
+  image(i2, width/2, height/2, 100, 100) ;
   fill("white");
 text("You have 10 seconds to decide the fate of the egg", 215, 140);
 textSize(20);
