@@ -10,7 +10,6 @@ let i3;
 var mic;
 var vol = 0;
 let r = 0;
-let f1;
 function setup() {
   createCanvas(800, 800);
   i1= loadImage("assets/Background.jpg") ;
@@ -35,7 +34,7 @@ switch (state) {
   textFont(f1, 20);
   text("You have 10 seconds. Yell to save the poor egg", 190, 50);
   image(i3, width/2, height/2-175, 225, 225) ;
-  // x = map(vol, 0, 1, 0, width);
+   //x = map(vol, 0, 1, 0, width);
   image(i2, width/2, height/2+210, 150, 200) ;
   x = width/2;
   y = 0;
@@ -44,10 +43,10 @@ switch (state) {
 
   case 1: //game state
   //text("You have 10 seconds. Yell to save the poor egg", 190, 50);
-  push();
-  translate(width/2, y) ;
-  rotate(r);
-  r++;
+   push();
+   translate(width/2, y) ;
+   rotate(r);
+   r++;
   //image(i3, width/2, y, 225, 225) ;
   image(i3, 0,0, 225, 225) ;
   pop();
