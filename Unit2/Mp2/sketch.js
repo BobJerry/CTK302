@@ -7,6 +7,7 @@ let timer = 0;
 let i1;
 let i2;
 let i3;
+let i4;
 var mic;
 var vol = 0;
 let r = 0;
@@ -15,6 +16,7 @@ function setup() {
   i1= loadImage("assets/Background.jpg") ;
   i2= loadImage("assets/Egg2.png");
   i3= loadImage("assets/Sawblade.png");
+  i4= loadImage("assets/Yolk.png");
   f1 = loadFont("assets/Vampire.ttf");
   mic = new p5.AudioIn(); // what does "new" mean?
   mic.start();
@@ -68,7 +70,7 @@ switch (state) {
   case 2: //you lose 
   text("The egg cracked under pressure :(", 240, 50)
   image(i3, width/2, y, 225, 225) ;
-  image(i2, x, height/2+210, 150, 200) ;
+  image(i4, x, height/2+240, 150, 150) ;
   v=0;
 
   break;
