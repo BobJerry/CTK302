@@ -1,7 +1,13 @@
 let numberOfTouches ;
+let i1;
+let i2;
+let i3;
 
 function setup() {
   createCanvas(400, 400);
+  i1= loadImage("assets/saul.jpg") ;
+  i2= loadImage("assets/finger.jpg");
+  i3= loadImage("assets/walt.jpg");
 }
 
 function draw() {
@@ -12,19 +18,19 @@ function draw() {
   switch(numberOfTouches) {
     case 0: 
       text("Touch me!", 5, 22) ; 
-      loadImage("assets/saul.jpg", 50, 50);
+      i1= loadImage("assets/saul.jpg", 50, 50);
       break ;
       
       case 1: 
        text("beep", 5, 22) ; 
       // put a picture here
-      loadImage("assets/saul.jpg", 50, 50);
+      i2= loadImage("assets/walt.jpg", 50, 50);
       break ;
       
       case 2:
       text("boop", 5, 22) ; 
       // put a picture here
-      loadImage("assets/finger.jpg", 50, 50);
+      i3= loadImage("assets/finger.jpg", 50, 50);
       break ;
       
       case 3:
