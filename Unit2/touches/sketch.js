@@ -18,19 +18,19 @@ function draw() {
   switch(numberOfTouches) {
     case 0: 
       text("Touch me!", 5, 22) ; 
-      i1= loadImage("assets/saul.jpg", 50, 50);
+      image(i1, width/2-200, height/2-200, 225, 225) ;
       break ;
       
       case 1: 
        text("beep", 5, 22) ; 
       // put a picture here
-      i2= loadImage("assets/walt.jpg", 50, 50);
+      image(i2, width/2, height/2-175, 225, 225) ;
       break ;
       
       case 2:
       text("boop", 5, 22) ; 
       // put a picture here
-      i3= loadImage("assets/finger.jpg", 50, 50);
+      image(i3, width/2, height/2-175, 2255, 225) ;
       break ;
       
       case 3:
