@@ -1,7 +1,7 @@
 let cars = [];
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(500, 500);
   for(let i = 0 ; i<20; i++) {
   cars.push(new Car());
   }
@@ -14,7 +14,7 @@ function draw() {
   background(100);
   for(let i = 0 ; i<20; i++) {
  cars[i].display();
- cars[i].move(;)
+ cars[i].move();
   fill('white') ;
   text(myCar.x, 100, 100 ) ;
   }
@@ -40,6 +40,9 @@ class Car {
   move() {
     this.pos.add (this.vel);
     if (this.x > width) this.x = 0 ;
+    if (this.pos.x < 0) this.pos.x = width
+    if (this.pos.y > height) this.pos.y = o;
+    if (this.pos.y < 0) this.pos.y = height;
   }
   
 }
