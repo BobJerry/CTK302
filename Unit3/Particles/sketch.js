@@ -2,21 +2,25 @@ let cars = [];
 
 function setup() {
   createCanvas(500, 500);
-  for(let i = 0 ; i<20; i++) {
-  cars.push(new Car());
-  }
+  //for(let i = 0 ; i<20; i++) {
+  //cars.push(new Car());
+  //}
   // Spawn one object
-  
-
+  bg=loadImage('assets/saul.jpg')
+noStroke() ;
 }
 
 function draw() {
-  background(100);
-  for(let i = 0 ; i<20; i++) {
+  background(bg);
+  cars.push(new Car());
+
+
+  for(let i = 0 ; i< cars.length; i++) {
  cars[i].display();
  cars[i].move();
-  fill('white') ;
-  text(myCar.x, 100, 100 ) ;
+ if (cars[i].a <= 0) {
+cars.splice(i, 1);
+ }
   }
 }
 
@@ -27,22 +31,29 @@ class Car {
 
   // constructor
   constructor() {
-    this.pos = createVector(width/2, height/2) ;  // initialize your attributes here
-    this.vel = createVector(random(3, -3), random(-3, 3));
+    this.pos = createVector(100, 100) ;  // initialize your attributes here
+    this.vel = createVector(random(10), random(10));
+    this.r = random(255);
+    this.g = random(255);
+    this.b = random(255);
+    this.a = random(200, 255);
+    this.s = random(5, 20);
   }
 
   // methods
 
   display() {
-    ellipse(this.pos.x, this.pos.y, 20);
+    fill (this.r, this.g, this.b, this.a);
+    text("Woom", this.pos.x, this.pos.y);
   }
 
   move() {
     this.pos.add (this.vel);
-    if (this.x > width) this.x = 0 ;
-    if (this.pos.x < 0) this.pos.x = width
-    if (this.pos.y > height) this.pos.y = o;
-    if (this.pos.y < 0) this.pos.y = height;
+    this.a = this.a-5;
+    //if (this.x > width) this.x = 0 ;
+    //if (this.pos.x < 0) this.pos.x = width;
+    //if (this.pos.y > height) this.pos.y = o;
+    //if (this.pos.y < 0) this.pos.y = height;
   }
   
 }
