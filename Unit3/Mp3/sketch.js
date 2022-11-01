@@ -8,16 +8,22 @@ let House;
 let Ladybug;
 let types = [];
 let f1;
+let s1;
+let s2; 
+let s3;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800, 800);
   rectMode(CENTER);
   imageMode(CENTER);
   Fly = loadImage("Assets/Fly.png");
   Swatter = loadImage("Assets/Swatter.png");
   House = loadImage("Assets/House.png");
-  Fruitfly = loadImage("Assets/Fruitfly.png")
+  Fruitfly = loadImage("Assets/Fruitfly.png");
   f1 = loadFont("Assets/Squash.woff");
+  s1 = loadSound("Assets/Pizza.mp3");
+  s2 = loadSound("Assets/Final.mp3");
+  s3 = loadSound("Assets/Radio.mp3")
   types = [Fly, Ladybug];
 
   // Spawn objects
@@ -32,9 +38,12 @@ function setup() {
 function draw() {
   switch (state) {
     case 0: // menu
+    background("grey");
+  imageMode(CENTER);
+  image(House, width/2, height/2, width, height) ;
       fill("white");
-      textFont(f1, 40);
-      text("Click to start", width / 2, height / 2);
+      textFont(f1, 80);
+      text("Click to Start", 275, 400);
       break;
 
     case 1:
@@ -47,17 +56,15 @@ function draw() {
       break;
 
     case 2: // win
-    background= loadImage("Assets/House.png");
       fill("white");
-      textFont(f1, 40);
-      text("You stopped the infestation!", width / 2, height / 2);
+      textFont(f1, 80);
+      text("You Stopped the Infestation!", 90, 75);
       break;
 
     case 3: // lose
-      background= loadImage("Assets/House.png");
-      fill("white");
-      textFont(f1, 40);
-      text("The infestation has only just begun...", width / 2, height / 2);
+      fill("black");
+      textFont(f1, 80);
+      text("The Infestation has Only Just Begun...", 90, 75);
       break;
   }
 }
@@ -90,8 +97,10 @@ function mouseReleased() {
 }
 
 function game() {
-  background("white");
-
+  // background("white");
+  background("grey");
+  imageMode(CENTER);
+  image(House, width/2, height/2, width, height) ;
   // operate on every car
   for (let i = 0; i < cars.length; i++) {
     cars[i].display();
@@ -107,9 +116,9 @@ function game() {
   }
 
   // add a "frog"
-  this.img = Swatter;
-  // fill("green");
-  // ellipse(frogPos.x, frogPos.y, 50, 50);
+   //fill("green");
+   //ellipse(frogPos.x, frogPos.y, 50, 50);
+   image(Swatter, frogPos.x, frogPos.y);
   checkForKeys();
 }
 
