@@ -8,9 +8,15 @@ let House;
 let Ladybug;
 let types = [];
 let f1;
-let s1;
-let s2; 
-let s3;
+let Pizza;
+let Final; 
+let Radio;
+
+function preload() {
+  Pizza = loadSound("Assets/Pizza.mp3");
+  Final = loadSound("Assets/Final.mp3");
+  Radio = loadSound("Assets/Radio.mp3");
+}
 
 function setup() {
   createCanvas(800, 800);
@@ -21,9 +27,6 @@ function setup() {
   House = loadImage("Assets/House.png");
   Fruitfly = loadImage("Assets/Fruitfly.png");
   f1 = loadFont("Assets/Squash.woff");
-  s1 = loadSound("Assets/Pizza.mp3");
-  s2 = loadSound("Assets/Final.mp3");
-  s3 = loadSound("Assets/Radio.mp3")
   types = [Fly, Ladybug];
 
   // Spawn objects
@@ -37,6 +40,11 @@ function setup() {
 
 function draw() {
   switch (state) {
+    case -1:
+      Commander.loop();
+      state = 0;
+      break;
+
     case 0: // menu
     background("grey");
   imageMode(CENTER);
@@ -53,6 +61,8 @@ function draw() {
         timer = 0;
         state = 3;
       }
+      Pizza.stop();
+      Radio.start();
       break;
 
     case 2: // win
@@ -81,6 +91,8 @@ function resetTheGame() {
 function mouseReleased() {
   switch (state) {
     case 0: // menu screen
+    Commander.stop();
+    Pizza.play();
       state = 1;
       break;
 
@@ -112,6 +124,8 @@ function game() {
   }
 
   if (cars.length == 0) {
+    Pizza.stop();
+    Final.play();
     state = 2;
   }
 
@@ -171,5 +185,6 @@ class Car {
   }
 }
 
-
-
+function touchStarted() {
+  getAudioContext().resume();
+}
