@@ -62,7 +62,7 @@ function draw() {
         state = 3;
       }
       Pizza.stop();
-      Radio.start();
+      Radio.play();
       break;
 
     case 2: // win
