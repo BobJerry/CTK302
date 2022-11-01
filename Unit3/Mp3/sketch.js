@@ -41,7 +41,7 @@ function setup() {
 function draw() {
   switch (state) {
     case -1:
-      Commander.loop();
+      // Pizza.loop();
       state = 0;
       break;
 
@@ -59,6 +59,8 @@ function draw() {
       timer++;
       if (timer > 10 * 60) {
         timer = 0;
+        Pizza.stop();
+        Radio.play();
         state = 3;
       }
       // Pizza.stop();
@@ -72,6 +74,7 @@ function draw() {
       break;
 
     case 3: // lose
+  
       fill("black");
       textFont(f1, 80);
       text("The Infestation has Only Just Begun...", 90, 75);
@@ -81,7 +84,7 @@ function draw() {
 
 function resetTheGame() {
   cars = [];
-
+  
   for (let i = 0; i < 4; i++) {
     cars.push(new Car());
   }
@@ -91,17 +94,19 @@ function resetTheGame() {
 function mouseReleased() {
   switch (state) {
     case 0: // menu screen
-    Commander.stop();
+    // Pizza.stop();
     Pizza.play();
       state = 1;
       break;
 
     case 2: // win screen
+      Final.stop();
       resetTheGame();
       state = 0;
       break;
 
     case 3: // lose screen
+      Radio.stop();
       resetTheGame();
       state = 0;
       break;
