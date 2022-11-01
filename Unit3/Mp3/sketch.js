@@ -5,6 +5,7 @@ let timer = 0;
 let Fly;
 let Swatter;
 let House;
+let Ladybug;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -13,6 +14,7 @@ function setup() {
   Fly = loadImage("Assets/Fly.png");
   Swatter = loadImage("Assets/Swatter.png");
   House = loadImage("Assets/House.png");
+  Ladybug = loadImage("Assets/Ladybug")
 
   // Spawn objects
   for (let i = 0; i < 4; i++) {
@@ -42,13 +44,13 @@ function draw() {
     case 2: // win
       background(100);
       fill("white");
-      text("you won!", width / 2, height / 2);
+      text("You stopped the infestation!", width / 2, height / 2);
       break;
 
     case 3: // lose
       background(100);
       fill("white");
-      text("you lost!", width / 2, height / 2);
+      text("The infestation has only just begun...", width / 2, height / 2);
       break;
   }
 }
@@ -125,14 +127,21 @@ class Car {
     this.o = random(100);
     this.size = random(48, 128);
     // this.type = random(3) ;
+
+    if (random(2)>1) {
+      this.img = Fly;
+    } else {
+      this.img = Ladybug;
+    }
   }
   // methods
 
   display() {
-    // this can be text, images, or shapes
-    fill(this.r, this.g, this.b, this.o);
-    rect(this.pos.x, this.pos.y, this.size, 25);
-    // image(this.img, this.pos.x, this.pos.y) ;
+    // // this can be text, images, or shapes
+    // fill(this.r, this.g, this.b, this.o);
+    // rect(this.pos.x, this.pos.y, this.size, 25);
+    image(Fly, this.pos.x, this.pos.y) ;
+    image()
   }
 
   move() {
