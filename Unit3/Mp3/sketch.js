@@ -55,7 +55,7 @@ function draw() {
       break;
 
     case 3: // lose
-      background= loadImage("Assets/House.png")
+      background= loadImage("Assets/House.png");
       fill("white");
       textFont(f1, 40);
       text("The infestation has only just begun...", width / 2, height / 2);
@@ -108,8 +108,9 @@ function game() {
   }
 
   // add a "frog"
-  fill("green");
-  ellipse(frogPos.x, frogPos.y, 50, 50);
+  this.img = Swatter;
+  // fill("green");
+  // ellipse(frogPos.x, frogPos.y, 50, 50);
   checkForKeys();
 }
 
