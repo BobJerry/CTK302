@@ -1,6 +1,6 @@
 let cars = [];
 let frogPos;
-let state = 0;
+let state = -1;
 let timer = 0;
 let Fly;
 let Swatter;
@@ -61,8 +61,8 @@ function draw() {
         timer = 0;
         state = 3;
       }
-      Pizza.stop();
-      Radio.play();
+      // Pizza.stop();
+      // Radio.play();
       break;
 
     case 2: // win
