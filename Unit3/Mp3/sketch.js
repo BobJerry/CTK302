@@ -32,7 +32,6 @@ function setup() {
 function draw() {
   switch (state) {
     case 0: // menu
-      background(100);
       fill("white");
       textFont(f1, 40);
       text("Click to start", width / 2, height / 2);
@@ -48,7 +47,7 @@ function draw() {
       break;
 
     case 2: // win
-      background(100);
+    background= loadImage("Assets/House.png");
       fill("white");
       textFont(f1, 40);
       text("You stopped the infestation!", width / 2, height / 2);
