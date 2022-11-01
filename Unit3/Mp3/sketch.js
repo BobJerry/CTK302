@@ -4,11 +4,15 @@ let state = 0;
 let timer = 0;
 let Fly;
 let Swatter;
+let House;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   imageMode(CENTER);
+  Fly = loadImage("Assets/Fly.png");
+  Swatter = loadImage("Assets/Swatter.png");
+  House = loadImage("Assets/House.png");
 
   // Spawn objects
   for (let i = 0; i < 4; i++) {
