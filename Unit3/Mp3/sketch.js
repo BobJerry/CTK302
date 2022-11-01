@@ -6,6 +6,7 @@ let Fly;
 let Swatter;
 let House;
 let Ladybug;
+let types = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -14,7 +15,8 @@ function setup() {
   Fly = loadImage("Assets/Fly.png");
   Swatter = loadImage("Assets/Swatter.png");
   House = loadImage("Assets/House.png");
-  Ladybug = loadImage("Assets/Ladybug")
+  Fruitfly = loadImage("Assets/Fruitfly.png")
+  types = [Fly, Ladybug];
 
   // Spawn objects
   for (let i = 0; i < 4; i++) {
@@ -126,12 +128,12 @@ class Car {
     this.b = random(255);
     this.o = random(100);
     this.size = random(48, 128);
-    // this.type = random(3) ;
+    this.type = random(2) ;
 
     if (random(2)>1) {
       this.img = Fly;
     } else {
-      this.img = Ladybug;
+      this.img = Fruitfly;
     }
   }
   // methods
@@ -140,8 +142,8 @@ class Car {
     // // this can be text, images, or shapes
     // fill(this.r, this.g, this.b, this.o);
     // rect(this.pos.x, this.pos.y, this.size, 25);
-    image(Fly, this.pos.x, this.pos.y) ;
-    image()
+    //image(this.img, this.pos.x, this.pos.y) ;
+    image(this.img, this.pos.x, this.pos.y) ;
   }
 
   move() {
