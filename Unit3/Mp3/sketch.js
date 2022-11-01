@@ -7,6 +7,7 @@ let Swatter;
 let House;
 let Ladybug;
 let types = [];
+let f1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -16,6 +17,7 @@ function setup() {
   Swatter = loadImage("Assets/Swatter.png");
   House = loadImage("Assets/House.png");
   Fruitfly = loadImage("Assets/Fruitfly.png")
+  f1 = loadFont("Assets/Squash.woff");
   types = [Fly, Ladybug];
 
   // Spawn objects
@@ -31,7 +33,9 @@ function draw() {
   switch (state) {
     case 0: // menu
       background(100);
-      text("click to start", width / 2, height / 2);
+      fill("white");
+      textFont(f1, 40);
+      text("Click to start", width / 2, height / 2);
       break;
 
     case 1:
@@ -46,12 +50,14 @@ function draw() {
     case 2: // win
       background(100);
       fill("white");
+      textFont(f1, 40);
       text("You stopped the infestation!", width / 2, height / 2);
       break;
 
     case 3: // lose
-      background(100);
+      background= loadImage("Assets/House.png")
       fill("white");
+      textFont(f1, 40);
       text("The infestation has only just begun...", width / 2, height / 2);
       break;
   }
