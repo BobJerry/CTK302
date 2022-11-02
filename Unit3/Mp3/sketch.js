@@ -70,14 +70,15 @@ function draw() {
     case 2: // win
       fill("white");
       textFont(f1, 80);
-      text("You Stopped the Infestation!", 90, 75);
+      text("You Stopped the Infestation!", 50, 75);
       break;
 
     case 3: // lose
   
       fill("black");
       textFont(f1, 80);
-      text("The Infestation has Only Just Begun...", 90, 75);
+      text("The Infestation has Only Just", 50, 75);
+      text(" Begun...", 300, 200);
       break;
   }
 }
@@ -155,7 +156,7 @@ function checkForKeys() {
 class Car {
   // constructor and attributes
   constructor() {
-    this.pos = createVector(random(200, 400), 100); // initialize your attributes here
+    this.pos = createVector(random(300, 400), 100); // initialize your attributes here
     this.velocity = createVector(0, random(1, 5));
     this.r = random(255);
     this.g = random(255);
