@@ -9,8 +9,9 @@ function setup() {
 function draw() {
 background("blue");
 textFont("f1, 80")
-text("Better Call Saul", 100, 100);
-text("Created by", 50, 50);
-text("Vince Gilligan", 50, 50);
-text("And Peter Gould", 50, 50);
+text("Stop", 25, 25);
+text("Better Call Saul", 400, 300);
+text("Created by", 400, 450);
+text("Vince Gilligan", 400, 500);
+text("And Peter Gould", 400, 550);
 }
