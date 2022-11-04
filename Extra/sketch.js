@@ -1,13 +1,13 @@
 let f1;
 let i1;
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(innerWidth, outerHeight);
   i1 = loadImage("Assets/Saul.jpg")
-  f1 = laodFont("Assets/VCR.ttf")
+  f1 = loadFont("Assets/VCR.ttf")
 }
 
 function draw() {
-background("lightblue");
+background("blue");
 textFont("f1, 80")
 text("Better Call Saul", 100, 100);
 text("Created by", 50, 50);
