@@ -1,17 +1,19 @@
 let f1;
 let i1;
 function setup() {
-  createCanvas(innerWidth, outerHeight);
-  i1 = loadImage("Assets/Saul.jpg")
-  f1 = loadFont("Assets/VCR.ttf")
+  createCanvas(1000, 570);
+  saul = loadImage("Assets/saul.jpg");
+  vcr = loadFont("Assets/VCR.ttf");
 }
 
 function draw() {
 background("blue");
-textFont("f1, 80")
-text("Stop", 25, 25);
-text("Better Call Saul", 400, 300);
-text("Created by", 400, 450);
-text("Vince Gilligan", 400, 500);
-text("And Peter Gould", 400, 550);
+fill("white");
+textFont(vcr, 60);
+text("Better Call Saul", 200, 300);
+textFont(vcr, 30);
+text("Created by", 350, 400);
+text("Vince Gilligan", 350, 500);
+text("And Peter Gould", 350, 600);
+text("Rec", 45, 45);
 }
