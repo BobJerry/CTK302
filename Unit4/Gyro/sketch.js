@@ -14,7 +14,7 @@ function setup() {
 
 
 
-  bunnyImage = loadImage("assets/walt.jpg");
+  bunnyImage = loadImage("Assets/walt.jpg");
   VCR = loadFont("VCR.ttf")
   imageMode(CENTER);
   rectMode(CENTER);
