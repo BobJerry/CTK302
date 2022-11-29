@@ -15,6 +15,7 @@ function setup() {
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
+  bg=loadImage('assets/saul.jpg')
 }
 
 // The data comes back as an array of objects
@@ -54,7 +55,7 @@ class Bubble {
   }
 
   display() {
-    stroke("red");
+    stroke("black");
     noFill();
     ellipse(this.pos.x, this.pos.y+10, 120, 120);
     fill("white");
