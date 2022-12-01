@@ -8,7 +8,7 @@ var yPosition = 0;
 let Fly;
 let Fruitfly;
 let Swatter;
-let House;
+let Hell;
 
 // var bunnyImage;
 var cars = [];
@@ -23,6 +23,10 @@ function setup() {
   alpha = 0;
   beta = 0;
   gamma = 0;
+  Fly = loadImage("Assets/Fly.png");
+  Swatter = loadImage("Assets/Swatter.png");
+  Hell = loadImage("Assets/Hell.jpg");
+  Fruitfly = loadImage("Assets/Fruitfly.png");
 
 
   // spawn a bunch of cars
@@ -41,8 +45,8 @@ function setup() {
 }
 
 function draw() {
-
-  background('#c6f5ff'); // light blue
+image(Hell, width/2, height/2, width, height);
+//   background(Hell); // funny
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -58,8 +62,9 @@ function draw() {
 
   // draw the FROG
   // image(bunnyImage, 0, 0, 500, 500);
-  fill('green');
-  ellipse(0, 0, 80, 80);
+//   fill('green');
+//   ellipse(0, 0, 80, 80);
+image(Swatter, 0, 0);
   pop();
 
 
@@ -80,7 +85,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("Swat to your hearts content!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("Swat to your Hearts Content", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -159,6 +164,7 @@ function Car() {
     // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
     // rect(this.pos.x + 17, this.pos.y - 30, 80, 60) ;
     image(this.img, this.pos.x, this.pos.y) ;
+    // image(Hell, width/2, height/2, width, height) ;
   }
 
   this.drive = function() {
