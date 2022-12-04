@@ -1,5 +1,7 @@
 var bubbles = [];
 let url = "";
+let Saul;
+let Lounge;
 
 function setup() {
   let key = "12z1p8FhWN8ZzM4lafgqcJbQaTp4bsOZKOEQX8AmDQEw"; // this is KEY of the URL from the sheet
@@ -15,7 +17,8 @@ function setup() {
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
-  bg=loadImage('assets/saul.jpg')
+  Saul = loadImage('assets/saul.jpg');
+  Lounge = loadSong('assets/Lounge.mp3');
 }
 
 // The data comes back as an array of objects

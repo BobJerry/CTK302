@@ -9,6 +9,7 @@ let Fly;
 let Fruitfly;
 let Swatter;
 let Hell;
+let Doop;
 
 // var bunnyImage;
 var cars = [];
