@@ -4,7 +4,7 @@ let Saul;
 let Intro;
 
 function preload() {
-  Lounge = loadSound("Assets/Intro.mp3");
+  Intro = loadSound("Assets/Intro.mp3");
 }
 
 function setup() {
@@ -22,6 +22,7 @@ function setup() {
   ellipseMode(CENTER);
   rectMode(CENTER);
   Saul = loadImage('Assets/saul.jpg');
+  Intro.loop();
 }
 
 // The data comes back as an array of objects
@@ -44,7 +45,6 @@ function draw() {
   background("blue");
   imageMode(CENTER)
   image(Saul, width/2, height/2, width, height) ;
-  Intro.play();
 // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();

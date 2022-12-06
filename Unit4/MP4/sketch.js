@@ -10,6 +10,11 @@ let Fruitfly;
 let Swatter;
 let Hell;
 let Doop;
+let Metal;
+
+function preload() {
+  Doop = loadSound("Assets/Doop.mp3");
+}
 
 // var bunnyImage;
 var cars = [];
@@ -28,7 +33,8 @@ function setup() {
   Swatter = loadImage("Assets/Swatter.png");
   Hell = loadImage("Assets/Hell.jpg");
   Fruitfly = loadImage("Assets/Fruitfly.png");
-
+  Metal = loadFont("Assets/metal.ttf")
+  Doop.loop();
 
   // spawn a bunch of cars
   for (var i = 0; i < 40; i++) {
@@ -86,6 +92,7 @@ image(Hell, width/2, height/2, width, height);
   fill('white');
   textSize(40);
   textAlign(CENTER);
+  textFont(metal, 80)
   text("Swat to your Hearts Content", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
