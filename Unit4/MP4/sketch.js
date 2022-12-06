@@ -33,7 +33,7 @@ function setup() {
   Swatter = loadImage("Assets/Swatter.png");
   Hell = loadImage("Assets/Hell.jpg");
   Fruitfly = loadImage("Assets/Fruitfly.png");
-  Metal = loadFont("Assets/metal.ttf")
+  metal = loadFont("Assets/metal.ttf")
   Doop.loop();
 
   // spawn a bunch of cars
@@ -90,8 +90,6 @@ image(Hell, width/2, height/2, width, height);
 
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
-  textSize(40);
-  textAlign(CENTER);
   textFont(metal, 80)
   text("Swat to your Hearts Content", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
