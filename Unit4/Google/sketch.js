@@ -1,7 +1,11 @@
 var bubbles = [];
 let url = "";
 let Saul;
-let Lounge;
+let Intro;
+
+function preload() {
+  Lounge = loadSound("Assets/Intro.mp3");
+}
 
 function setup() {
   let key = "12z1p8FhWN8ZzM4lafgqcJbQaTp4bsOZKOEQX8AmDQEw"; // this is KEY of the URL from the sheet
@@ -17,8 +21,7 @@ function setup() {
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
-  Saul = loadImage('assets/saul.jpg');
-  Lounge = loadSong('assets/Lounge.mp3');
+  Saul = loadImage('Assets/saul.jpg');
 }
 
 // The data comes back as an array of objects
@@ -39,8 +42,10 @@ function gotData(data) {
 
 function draw() {
   background("blue");
-
-  // // iterate through the bubbles and display the objects!
+  imageMode(CENTER)
+  image(Saul, width/2, height/2, width, height) ;
+  Intro.play();
+// // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
   }
@@ -73,5 +78,7 @@ class Bubble {
     
   }
   
-  
+}
+function touchStarted() {
+  getAudioContext().resume();
 }
